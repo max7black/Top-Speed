@@ -41,7 +41,7 @@ TextureImporter:
   bumpmap:
     convertToNormalMap: 0
     externalNormalMap: 0
-    heightScale: .25
+    heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
@@ -61,11 +61,12 @@ TextureImporter:
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
+  allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
-  spritePivot: {x: .5, y: .5}
+  spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 200
   alphaIsTransparency: 1
@@ -75,18 +76,22 @@ TextureImporter:
     maxTextureSize: 1024
     textureFormat: -2
     compressionQuality: 100
+    allowsAlphaSplitting: 0
   - buildTarget: Android
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     textureFormat: -1
     compressionQuality: 50
+    allowsAlphaSplitting: 0
   - buildTarget: BlackBerry
     maxTextureSize: 1024
     textureFormat: -1
     compressionQuality: 50
+    allowsAlphaSplitting: 0
   - buildTarget: WP8
     maxTextureSize: 1024
     textureFormat: -1
     compressionQuality: 50
+    allowsAlphaSplitting: 0
   spriteSheet:
     sprites:
     - name: RobotBoyJump00
@@ -97,8 +102,18 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 38, y: 34.5}
+        - {x: 24, y: 43.5}
+        - {x: -5, y: 43.5}
+        - {x: -18, y: 29.5}
+        - {x: -18, y: -64.5}
+        - {x: 20, y: -64.5}
+        - {x: 21, y: -62.5}
+        - {x: 19, y: -53.5}
+        - {x: 38, y: 0.5}
     - name: RobotBoyJump01
       rect:
         serializedVersion: 2
@@ -107,8 +122,16 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4.5, y: 55.5}
+        - {x: -18.5, y: 23.5}
+        - {x: -18.5, y: -50.5}
+        - {x: -10.5, y: -65.5}
+        - {x: 19.5, y: -65.5}
+        - {x: 38.5, y: -0.5}
+        - {x: 38.5, y: 55.5}
     - name: RobotBoyJump02
       rect:
         serializedVersion: 2
@@ -117,8 +140,18 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 57.5}
+        - {x: -20, y: 39.5}
+        - {x: -20, y: -58.5}
+        - {x: -15, y: -62.5}
+        - {x: 8, y: -62.5}
+        - {x: 16, y: -61.5}
+        - {x: 38, y: 3.5}
+        - {x: 38, y: 53.5}
+        - {x: 35, y: 57.5}
     - name: RobotBoyJump03
       rect:
         serializedVersion: 2
@@ -127,8 +160,19 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 34.5, y: 59.5}
+        - {x: -0.5, y: 59.5}
+        - {x: -18.5, y: 44.5}
+        - {x: -18.5, y: -55.5}
+        - {x: -11.5, y: -60.5}
+        - {x: 2.5, y: -60.5}
+        - {x: 15.5, y: -57.5}
+        - {x: 40.5, y: 2.5}
+        - {x: 40.5, y: 45.5}
+        - {x: 36.5, y: 58.5}
     - name: RobotBoyJump04
       rect:
         serializedVersion: 2
@@ -137,8 +181,19 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 30, y: 60.5}
+        - {x: 1, y: 60.5}
+        - {x: -20, y: 19.5}
+        - {x: -20, y: -45.5}
+        - {x: -13, y: -55.5}
+        - {x: -7, y: -58.5}
+        - {x: -2, y: -58.5}
+        - {x: 5, y: -53.5}
+        - {x: 42, y: 17.5}
+        - {x: 42, y: 47.5}
     - name: RobotBoyJump05
       rect:
         serializedVersion: 2
@@ -147,8 +202,21 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3.5, y: -68.5}
+        - {x: 2.5, y: -65.5}
+        - {x: -2.5, y: -65.5}
+        - {x: -3.5, y: -68.5}
+      - - {x: 26.5, y: 62.5}
+        - {x: -6.5, y: 62.5}
+        - {x: -18.5, y: 47.5}
+        - {x: -18.5, y: -42.5}
+        - {x: -14.5, y: -56.5}
+        - {x: 0.5, y: -56.5}
+        - {x: 42.5, y: 23.5}
+        - {x: 42.5, y: 50.5}
     - name: RobotBoyJump06
       rect:
         serializedVersion: 2
@@ -157,8 +225,19 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 2, y: -68.5}
+        - {x: 1, y: -65.5}
+        - {x: -5, y: -65.5}
+        - {x: -6, y: -68.5}
+      - - {x: -8, y: 65.5}
+        - {x: -20, y: 53.5}
+        - {x: -20, y: -54.5}
+        - {x: 10, y: -54.5}
+        - {x: 37, y: 23.5}
+        - {x: 37, y: 65.5}
     - name: RobotBoyJump07
       rect:
         serializedVersion: 2
@@ -167,8 +246,21 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 32, y: 55}
+        - {x: 27, y: 63}
+        - {x: 13, y: 67}
+        - {x: -6, y: 67}
+        - {x: -15, y: 54}
+        - {x: -20, y: 16}
+        - {x: -20, y: -38}
+        - {x: -19, y: -53}
+        - {x: 0, y: -53}
+        - {x: 6, y: -50}
+        - {x: 34, y: 25}
+        - {x: 34, y: 45}
     - name: RobotBoyJump08
       rect:
         serializedVersion: 2
@@ -177,8 +269,19 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 31.5, y: 67}
+        - {x: 19.5, y: 69}
+        - {x: -15.5, y: 69}
+        - {x: -19.5, y: 66}
+        - {x: -19.5, y: -47}
+        - {x: -13.5, y: -52}
+        - {x: 8.5, y: -52}
+        - {x: 26.5, y: 12}
+        - {x: 18.5, y: 17}
+        - {x: 31.5, y: 22}
     - name: RobotBoyJump09
       rect:
         serializedVersion: 2
@@ -187,8 +290,16 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21, y: 69}
+        - {x: -22, y: 67}
+        - {x: -22, y: -49}
+        - {x: 10, y: -49}
+        - {x: 27, y: 9}
+        - {x: 27, y: 58}
+        - {x: 23, y: 69}
     - name: RobotBoyJump10
       rect:
         serializedVersion: 2
@@ -197,8 +308,18 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 17.5, y: 69}
+        - {x: -17.5, y: 69}
+        - {x: -24.5, y: 66}
+        - {x: -24.5, y: -37}
+        - {x: -22.5, y: -48}
+        - {x: 13.5, y: -48}
+        - {x: 22.5, y: -13}
+        - {x: 25.5, y: 7}
+        - {x: 25.5, y: 53}
     - name: RobotBoyJump11
       rect:
         serializedVersion: 2
@@ -207,8 +328,16 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28, y: 69}
+        - {x: -28, y: -28}
+        - {x: -27, y: -46}
+        - {x: 10, y: -46}
+        - {x: 17, y: -44}
+        - {x: 22, y: -34}
+        - {x: 22, y: 69}
     - name: RobotBoyJump12
       rect:
         serializedVersion: 2
@@ -217,8 +346,15 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28.5, y: 69}
+        - {x: -28.5, y: -12}
+        - {x: -21.5, y: -44}
+        - {x: 21.5, y: -44}
+        - {x: 22.5, y: -42}
+        - {x: 22.5, y: 69}
     - name: RobotBoyJump13
       rect:
         serializedVersion: 2
@@ -227,8 +363,21 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 22, y: -4}
+        - {x: 23, y: -2}
+        - {x: 23, y: 62}
+        - {x: 22, y: 69}
+        - {x: -31, y: 69}
+        - {x: -31, y: 37}
+        - {x: -16, y: -44}
+        - {x: 3, y: -44}
+        - {x: 15, y: -41}
+        - {x: 18, y: -38}
+        - {x: 10, y: -15}
+        - {x: 6, y: -11}
     - name: RobotBoyJump14
       rect:
         serializedVersion: 2
@@ -237,8 +386,25 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 22, y: 51.5}
+        - {x: 9, y: 69.5}
+        - {x: -22, y: 69.5}
+        - {x: -28, y: 68.5}
+        - {x: -31, y: 65.5}
+        - {x: -31, y: -13.5}
+        - {x: -19, y: -42.5}
+        - {x: 11, y: -42.5}
+        - {x: 24, y: -29.5}
+        - {x: 25, y: -24.5}
+        - {x: 25, y: 41.5}
+      - - {x: 11, y: -20.5}
+        - {x: 14, y: -19.5}
+        - {x: 14, y: -16.5}
+        - {x: 11, y: -15.5}
+        - {x: 9, y: -17.5}
     - name: RobotBoyJump15
       rect:
         serializedVersion: 2
@@ -247,8 +413,17 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8.5, y: 69.5}
+        - {x: -31.5, y: 69.5}
+        - {x: -31.5, y: -23.5}
+        - {x: -30.5, y: -42.5}
+        - {x: -3.5, y: -42.5}
+        - {x: 25.5, y: -33.5}
+        - {x: 25.5, y: 47.5}
+        - {x: 23.5, y: 54.5}
     - name: RobotBoyJump16
       rect:
         serializedVersion: 2
@@ -257,8 +432,17 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -34, y: 69.5}
+        - {x: -34, y: 28.5}
+        - {x: -22, y: -18.5}
+        - {x: -15, y: -43.5}
+        - {x: -4, y: -43.5}
+        - {x: 18, y: -36.5}
+        - {x: 24, y: -32.5}
+        - {x: 24, y: 69.5}
     - name: RobotBoyJump17
       rect:
         serializedVersion: 2
@@ -267,8 +451,19 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7.5, y: 69.5}
+        - {x: -18.5, y: 69.5}
+        - {x: -28.5, y: 67.5}
+        - {x: -33.5, y: 62.5}
+        - {x: -33.5, y: 35.5}
+        - {x: -16.5, y: -44.5}
+        - {x: -16.5, y: -45.5}
+        - {x: 12.5, y: -45.5}
+        - {x: 22.5, y: -38.5}
+        - {x: 22.5, y: 54.5}
     - name: RobotBoyJump18
       rect:
         serializedVersion: 2
@@ -277,8 +472,24 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18, y: 53.5}
+        - {x: 6, y: 69.5}
+        - {x: -22, y: 69.5}
+        - {x: -35, y: 65.5}
+        - {x: -35, y: 38.5}
+        - {x: -15, y: -11.5}
+        - {x: -14, y: -13.5}
+        - {x: -11, y: -17.5}
+        - {x: -18, y: -24.5}
+        - {x: -18, y: -47.5}
+        - {x: -12, y: -49.5}
+        - {x: -6, y: -49.5}
+        - {x: -4, y: -46.5}
+        - {x: 20, y: -40.5}
+        - {x: 20, y: 28.5}
     - name: RobotBoyJump19
       rect:
         serializedVersion: 2
@@ -287,8 +498,17 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23.5, y: 69.5}
+        - {x: -34.5, y: 66.5}
+        - {x: -34.5, y: 13.5}
+        - {x: -27.5, y: -30.5}
+        - {x: -9.5, y: -53.5}
+        - {x: -4.5, y: -53.5}
+        - {x: 18.5, y: -51.5}
+        - {x: 18.5, y: 69.5}
     - name: RobotBoyJump20
       rect:
         serializedVersion: 2
@@ -297,8 +517,18 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26, y: 68.5}
+        - {x: -35, y: 60.5}
+        - {x: -35, y: 18.5}
+        - {x: -22, y: -51.5}
+        - {x: -8, y: -56.5}
+        - {x: 2, y: -56.5}
+        - {x: 17, y: -46.5}
+        - {x: 17, y: 53.5}
+        - {x: 9, y: 68.5}
     - name: RobotBoyJump21
       rect:
         serializedVersion: 2
@@ -307,8 +537,22 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: 67}
+        - {x: -35, y: -43}
+        - {x: -6, y: -58}
+        - {x: -5, y: -59}
+        - {x: 3, y: -59}
+        - {x: 17, y: -48}
+        - {x: 17, y: 59}
+        - {x: 3, y: 67}
+      - - {x: 14, y: -33}
+        - {x: 17, y: -32}
+        - {x: 17, y: -29}
+        - {x: 14, y: -28}
+        - {x: 12, y: -30}
     - name: RobotBoyJump22
       rect:
         serializedVersion: 2
@@ -317,8 +561,17 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -33.5, y: 66}
+        - {x: -33.5, y: -35}
+        - {x: -30.5, y: -50}
+        - {x: -6.5, y: -60}
+        - {x: 7.5, y: -60}
+        - {x: 18.5, y: -44}
+        - {x: 18.5, y: 59}
+        - {x: 14.5, y: 66}
     - name: RobotBoyJump23
       rect:
         serializedVersion: 2
@@ -327,8 +580,24 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: 65}
+        - {x: -31, y: 65}
+        - {x: -35, y: 63}
+        - {x: -35, y: 16}
+        - {x: -22, y: -47}
+        - {x: -3, y: -61}
+        - {x: 8, y: -61}
+        - {x: 16, y: -54}
+        - {x: 17, y: -44}
+        - {x: 17, y: 56}
+      - - {x: 12, y: -39}
+        - {x: 15, y: -38}
+        - {x: 15, y: -35}
+        - {x: 12, y: -34}
+        - {x: 10, y: -36}
     - name: RobotBoyJump24
       rect:
         serializedVersion: 2
@@ -337,8 +606,18 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -33.5, y: 63}
+        - {x: -33.5, y: -6}
+        - {x: -21.5, y: -46}
+        - {x: -4.5, y: -63}
+        - {x: 2.5, y: -63}
+        - {x: 6.5, y: -61}
+        - {x: 17.5, y: -56}
+        - {x: 18.5, y: -54}
+        - {x: 18.5, y: 63}
     - name: RobotBoyJump25
       rect:
         serializedVersion: 2
@@ -347,8 +626,19 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23, y: 61}
+        - {x: -34, y: 51}
+        - {x: -34, y: 1}
+        - {x: -21, y: -45}
+        - {x: -8, y: -65}
+        - {x: 18, y: -65}
+        - {x: 18, y: 47}
+        - {x: 7, y: 61}
+    outline: []
   spritePackingTag: 
   userData: 
   assetBundleName: 
+  assetBundleVariant: 

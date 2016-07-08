@@ -31,7 +31,7 @@ TextureImporter:
   bumpmap:
     convertToNormalMap: 0
     externalNormalMap: 0
-    heightScale: .25
+    heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
@@ -51,11 +51,12 @@ TextureImporter:
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
+  allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
-  spritePivot: {x: .5, y: .5}
+  spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 200
   alphaIsTransparency: 1
@@ -65,18 +66,22 @@ TextureImporter:
     maxTextureSize: 1024
     textureFormat: -2
     compressionQuality: 100
+    allowsAlphaSplitting: 0
   - buildTarget: Android
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     textureFormat: -1
     compressionQuality: 50
+    allowsAlphaSplitting: 0
   - buildTarget: BlackBerry
     maxTextureSize: 1024
     textureFormat: -1
     compressionQuality: 50
+    allowsAlphaSplitting: 0
   - buildTarget: WP8
     maxTextureSize: 1024
     textureFormat: -1
     compressionQuality: 50
+    allowsAlphaSplitting: 0
   spriteSheet:
     sprites:
     - name: RobotBoyRun00
@@ -87,8 +92,19 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24, y: 59.5}
+        - {x: -34, y: 9.5}
+        - {x: -34, y: -15.5}
+        - {x: -23, y: -21.5}
+        - {x: -30, y: -20.5}
+        - {x: -34, y: -30.5}
+        - {x: -34, y: -50.5}
+        - {x: 23, y: -50.5}
+        - {x: 29, y: -41.5}
+        - {x: 29, y: 59.5}
     - name: RobotBoyRun01
       rect:
         serializedVersion: 2
@@ -97,8 +113,19 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 22.5, y: 55.5}
+        - {x: -12.5, y: 55.5}
+        - {x: -25.5, y: 44.5}
+        - {x: -29.5, y: 21.5}
+        - {x: -29.5, y: -56.5}
+        - {x: 20.5, y: -56.5}
+        - {x: 26.5, y: -49.5}
+        - {x: 20.5, y: -37.5}
+        - {x: 29.5, y: -31.5}
+        - {x: 29.5, y: 39.5}
     - name: RobotBoyRun02
       rect:
         serializedVersion: 2
@@ -107,8 +134,24 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20, y: 51.5}
+        - {x: -7, y: 51.5}
+        - {x: -21, y: 48.5}
+        - {x: -25, y: 2.5}
+        - {x: -25, y: -56.5}
+        - {x: -23, y: -61.5}
+        - {x: -21, y: -61.5}
+        - {x: -19, y: -60.5}
+        - {x: -14, y: -55.5}
+        - {x: -9, y: -61.5}
+        - {x: 8, y: -61.5}
+        - {x: 13, y: -60.5}
+        - {x: 18, y: -52.5}
+        - {x: 30, y: 8.5}
+        - {x: 30, y: 39.5}
     - name: RobotBoyRun03
       rect:
         serializedVersion: 2
@@ -117,8 +160,16 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19.5, y: 49.5}
+        - {x: -19.5, y: -59.5}
+        - {x: -16.5, y: -63.5}
+        - {x: 18.5, y: -63.5}
+        - {x: 33.5, y: -4.5}
+        - {x: 33.5, y: 35.5}
+        - {x: 29.5, y: 49.5}
     - name: RobotBoyRun04
       rect:
         serializedVersion: 2
@@ -127,8 +178,15 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26, y: 51.5}
+        - {x: -26, y: -63.5}
+        - {x: 15, y: -63.5}
+        - {x: 33, y: -12.5}
+        - {x: 33, y: 47.5}
+        - {x: 28, y: 51.5}
     - name: RobotBoyRun05
       rect:
         serializedVersion: 2
@@ -137,8 +195,32 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -1.5, y: -33.5}
+        - {x: -4.5, y: -40.5}
+        - {x: -7.5, y: -45.5}
+        - {x: -4.5, y: -52.5}
+        - {x: 9.5, y: -58.5}
+        - {x: 30.5, y: -51.5}
+        - {x: 30.5, y: 55.5}
+        - {x: -8.5, y: 55.5}
+        - {x: -19.5, y: 52.5}
+        - {x: -20.5, y: 43.5}
+        - {x: -33.5, y: 1.5}
+        - {x: -33.5, y: -23.5}
+        - {x: -27.5, y: -28.5}
+        - {x: -18.5, y: -23.5}
+        - {x: -15.5, y: -19.5}
+        - {x: -11.5, y: -33.5}
+        - {x: -28.5, y: -43.5}
+        - {x: -27.5, y: -54.5}
+        - {x: -15.5, y: -60.5}
+        - {x: -7.5, y: -60.5}
+        - {x: -6.5, y: -54.5}
+        - {x: -11.5, y: -48.5}
+        - {x: -3.5, y: -38.5}
     - name: RobotBoyRun06
       rect:
         serializedVersion: 2
@@ -147,8 +229,23 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 29, y: 59.5}
+        - {x: -30, y: 59.5}
+        - {x: -39, y: 12.5}
+        - {x: -39, y: -17.5}
+        - {x: -34, y: -21.5}
+        - {x: -30, y: -20.5}
+        - {x: -23, y: -14.5}
+        - {x: -33, y: -30.5}
+        - {x: -32, y: -37.5}
+        - {x: -31, y: -50.5}
+        - {x: -27, y: -52.5}
+        - {x: 23, y: -52.5}
+        - {x: 30, y: -37.5}
+        - {x: 30, y: 29.5}
     - name: RobotBoyRun07
       rect:
         serializedVersion: 2
@@ -157,8 +254,26 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 32, y: -20}
+        - {x: 32, y: 43}
+        - {x: 26, y: 60}
+        - {x: -21, y: 60}
+        - {x: -40, y: 17}
+        - {x: -40, y: -21}
+        - {x: -28, y: -19}
+        - {x: -23, y: -12}
+        - {x: -15, y: -23}
+        - {x: -31, y: -20}
+        - {x: -34, y: -25}
+        - {x: -35, y: -42}
+        - {x: -34, y: -45}
+        - {x: 19, y: -45}
+        - {x: 32, y: -30}
+        - {x: 32, y: -26}
+        - {x: 29, y: -23}
     - name: RobotBoyRun08
       rect:
         serializedVersion: 2
@@ -167,8 +282,25 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22.5, y: 58}
+        - {x: -36.5, y: 12}
+        - {x: -36.5, y: -19}
+        - {x: -24.5, y: -21}
+        - {x: -21.5, y: -14}
+        - {x: -20.5, y: -23}
+        - {x: -26.5, y: -21}
+        - {x: -30.5, y: -26}
+        - {x: -32.5, y: -31}
+        - {x: -34.5, y: -41}
+        - {x: -31.5, y: -45}
+        - {x: -29.5, y: -45}
+        - {x: -20.5, y: -50}
+        - {x: 30.5, y: -50}
+        - {x: 30.5, y: 57}
+        - {x: 26.5, y: 58}
     - name: RobotBoyRun09
       rect:
         serializedVersion: 2
@@ -177,8 +309,24 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18, y: 54}
+        - {x: -33, y: 7}
+        - {x: -33, y: -26}
+        - {x: -28, y: -28}
+        - {x: -21, y: -27}
+        - {x: -17, y: -20}
+        - {x: -17, y: -16}
+        - {x: -14, y: -28}
+        - {x: -27, y: -28}
+        - {x: -32, y: -32}
+        - {x: -33, y: -47}
+        - {x: -33, y: -60}
+        - {x: 30, y: -60}
+        - {x: 30, y: 42}
+        - {x: 19, y: 54}
     - name: RobotBoyRun10
       rect:
         serializedVersion: 2
@@ -187,8 +335,22 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15.5, y: 51}
+        - {x: -24.5, y: 9}
+        - {x: -24.5, y: -57}
+        - {x: -23.5, y: -59}
+        - {x: -14.5, y: -61}
+        - {x: -12.5, y: -57}
+        - {x: -12.5, y: -53}
+        - {x: -12.5, y: -63}
+        - {x: -11.5, y: -65}
+        - {x: 23.5, y: -65}
+        - {x: 32.5, y: -30}
+        - {x: 32.5, y: 41}
+        - {x: 27.5, y: 51}
     - name: RobotBoyRun11
       rect:
         serializedVersion: 2
@@ -197,8 +359,16 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18, y: 49}
+        - {x: -20, y: 48}
+        - {x: -20, y: -66}
+        - {x: 10, y: -66}
+        - {x: 32, y: -51}
+        - {x: 33, y: -38}
+        - {x: 33, y: 49}
     - name: RobotBoyRun12
       rect:
         serializedVersion: 2
@@ -207,8 +377,15 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15.5, y: 50}
+        - {x: -23.5, y: 29}
+        - {x: -23.5, y: -61}
+        - {x: -16.5, y: -66}
+        - {x: 33.5, y: -66}
+        - {x: 33.5, y: 50}
     - name: RobotBoyRun13
       rect:
         serializedVersion: 2
@@ -217,8 +394,30 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11, y: -11}
+        - {x: 29, y: 13}
+        - {x: 29, y: 50}
+        - {x: 13, y: 55}
+        - {x: -21, y: 55}
+        - {x: -31, y: 25}
+        - {x: -31, y: -27}
+        - {x: -20, y: -28}
+        - {x: -15, y: -20}
+        - {x: -15, y: -16}
+        - {x: -16, y: -12}
+        - {x: -14, y: -14}
+        - {x: -15, y: -19}
+        - {x: -15, y: -25}
+        - {x: -31, y: -44}
+        - {x: -31, y: -49}
+        - {x: -17, y: -66}
+        - {x: 11, y: -66}
+        - {x: 26, y: -58}
+        - {x: 27, y: -16}
+        - {x: 16, y: -11}
     - name: RobotBoyRun14
       rect:
         serializedVersion: 2
@@ -227,8 +426,17 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 59.5}
+        - {x: -35, y: 48.5}
+        - {x: -35, y: -58.5}
+        - {x: -9, y: -58.5}
+        - {x: 23, y: -54.5}
+        - {x: 30, y: -47.5}
+        - {x: 30, y: 47.5}
+        - {x: 26, y: 59.5}
     - name: RobotBoyRun15
       rect:
         serializedVersion: 2
@@ -237,8 +445,25 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30.5, y: 60.5}
+        - {x: -34.5, y: 42.5}
+        - {x: -34.5, y: -17.5}
+        - {x: -21.5, y: -18.5}
+        - {x: -16.5, y: -8.5}
+        - {x: -15.5, y: -12.5}
+        - {x: -24.5, y: -21.5}
+        - {x: -32.5, y: -26.5}
+        - {x: -34.5, y: -38.5}
+        - {x: -34.5, y: -50.5}
+        - {x: 5.5, y: -50.5}
+        - {x: 29.5, y: -46.5}
+        - {x: 30.5, y: -41.5}
+        - {x: 30.5, y: 60.5}
+    outline: []
   spritePackingTag: 
   userData: 
   assetBundleName: 
+  assetBundleVariant: 

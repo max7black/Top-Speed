@@ -19,6 +19,18 @@ namespace UnityStandardAssets._2D
         private Animator m_Anim;            // Reference to the player's animator component.
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
+        private float angle;                // angle of player relative to the ground they are standing on
+        private float slopedir;
+        private Transform TwoDCharacter;
+
+        public float dampingRate = 0.1f;
+        // This determines how far it can detect the ground from
+        public float rayLength = 1.0f;
+        // Set this up with the correct 'ground' layers
+        public LayerMask mask = 1 << 8;
+        Vector3 currentUp = Vector3.up;
+        public Quaternion rotation;
+        public Vector3 zRotation;
 
         private void Awake()
         {
@@ -46,8 +58,17 @@ namespace UnityStandardAssets._2D
 
             // Set the vertical animation
             m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
-        }
 
+            // Casts a ray and hits if it finds the layermask ground
+            RaycastHit2D[] hit = new RaycastHit2D[1];   // we want only the first hit
+            if (Physics2D.RaycastNonAlloc(transform.position, -currentUp, hit, rayLength, mask) == 1) //enters if statment if the raycast hits something with layer mask "Ground"
+            {
+                currentUp = hit[0].normal;      // finds the normal vector of the ray. This lets up know what direction is perpendicular with grounds slope
+            }
+            // Sets the rotation based on the currentUp then scales it to be within the -90 to 90 and inverts it, other wise player rotates wrong direction down/up slopes
+            m_Rigidbody2D.rotation = (Mathf.Atan2(currentUp.x, currentUp.y) * -100) / 2;
+        }
+    
 
         public void Move(float move, bool crouch, bool jump)
         {
@@ -110,5 +131,6 @@ namespace UnityStandardAssets._2D
             theScale.x *= -1;
             transform.localScale = theScale;
         }
+
     }
 }
