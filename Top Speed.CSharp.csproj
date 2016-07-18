@@ -85,6 +85,7 @@
     <Compile Include="Assets\Scripts\Game Mechanics\PlatformerCharacter2D.cs" />
     <Compile Include="Assets\Scripts\Game Mechanics\ProtectCameraFromWallClip.cs" />
     <Compile Include="Assets\Scripts\Game Mechanics\TargetFieldOfView.cs" />
+    <Compile Include="Assets\Scripts\Managers\SpeedManagers.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Resources\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
