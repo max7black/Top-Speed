@@ -10,6 +10,8 @@ namespace UnityStandardAssets._2D
         [Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;  // Amount of maxSpeed applied to crouching movement. 1 = 100%
         [SerializeField] private bool m_AirControl = false;                 // Whether or not a player can steer while jumping;
         [SerializeField] private LayerMask m_WhatIsGround;                  // A mask determining what is ground to the character
+        [SerializeField] private float m_DefaultSpeed = 5f;                  // default speed is how fast the player goes on a flat surface
+        
 
         private Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
         const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
@@ -22,15 +24,19 @@ namespace UnityStandardAssets._2D
         private float angle;                // angle of player relative to the ground they are standing on
         private float slopedir;
         private Transform TwoDCharacter;
+        private float m_Speed = 0.0f;       // current speed of player
+        private float m_MinSpeed = 0.0f;           // the minimum speed the player can go determined while trying to run
 
-        public float dampingRate = 0.1f;
+        private float dampingRate = 0.1f;
         // This determines how far it can detect the ground from
-        public float rayLength = 1.0f;
+        private float rayLength = 1.0f;
         // Set this up with the correct 'ground' layers
-        public LayerMask mask = 1 << 8;
+        private LayerMask maskGround = 1 << 8;
         Vector3 currentUp = Vector3.up;
         public Quaternion rotation;
         public Vector3 zRotation;
+        public static float currentVelocity = 0.0f;
+        
 
         private void Awake()
         {
@@ -39,6 +45,7 @@ namespace UnityStandardAssets._2D
             m_CeilingCheck = transform.Find("CeilingCheck");
             m_Anim = GetComponent<Animator>();
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
+
         }
 
 
@@ -61,12 +68,16 @@ namespace UnityStandardAssets._2D
 
             // Casts a ray and hits if it finds the layermask ground
             RaycastHit2D[] hit = new RaycastHit2D[1];   // we want only the first hit
-            if (Physics2D.RaycastNonAlloc(transform.position, -currentUp, hit, rayLength, mask) == 1) //enters if statment if the raycast hits something with layer mask "Ground"
+            if (Physics2D.RaycastNonAlloc(transform.position, -currentUp, hit, rayLength, maskGround) == 1) //enters if statment if the raycast hits something with layer mask "Ground"
             {
                 currentUp = hit[0].normal;      // finds the normal vector of the ray. This lets up know what direction is perpendicular with grounds slope
             }
+
             // Sets the rotation based on the currentUp then scales it to be within the -90 to 90 and inverts it, other wise player rotates wrong direction down/up slopes
             m_Rigidbody2D.rotation = (Mathf.Atan2(currentUp.x, currentUp.y) * -100) / 2;
+            
+            Speed();
+            currentVelocity = m_Rigidbody2D.velocity.x;
         }
     
 
@@ -95,7 +106,15 @@ namespace UnityStandardAssets._2D
                 m_Anim.SetFloat("Speed", Mathf.Abs(move));
 
                 // Move the character
-                m_Rigidbody2D.velocity = new Vector2(move*m_MaxSpeed, m_Rigidbody2D.velocity.y);
+                if (m_Rigidbody2D.velocity.x == 0f)
+                {
+                    m_Rigidbody2D.velocity = new Vector2(move * m_DefaultSpeed, m_Rigidbody2D.velocity.y);
+                    m_Speed = m_DefaultSpeed;
+                }
+                else
+                {
+                    m_Rigidbody2D.velocity = new Vector2(move * m_Speed, m_Rigidbody2D.velocity.y);
+                }
 
                 // If the input is moving the player right and the player is facing left...
                 if (move > 0 && !m_FacingRight)
@@ -132,5 +151,69 @@ namespace UnityStandardAssets._2D
             transform.localScale = theScale;
         }
 
+        private void Speed()
+        {
+            // Find minimum speed based on the angle of the slope the player is running on. If it's less than a 60 degree angle then min speed should be 
+            // that 10 minus the angle*0.1, so between 10 and 4. If the angle is greater than 60 then the players speed will eventually be zero.
+            if ((m_Rigidbody2D.velocity.x >= 0 && m_Rigidbody2D.velocity.x <= 60) || (m_Rigidbody2D.velocity.x <= 0 && m_Rigidbody2D.velocity.x >= -60) ||
+                (m_Rigidbody2D.velocity.x >= 360 && m_Rigidbody2D.velocity.x <= 300) || (m_Rigidbody2D.velocity.x <= -360 && m_Rigidbody2D.velocity.x >= -300))
+            {
+                m_MinSpeed = 10.0f - (m_Rigidbody2D.rotation * 0.1f);
+            }
+            else
+            {
+                m_MinSpeed = 0.0f;
+            }
+            
+            // if player if facing right and his rotation between 0->90 or -360->-270 then he's going up hill. Thus, his velocity should slowly decrease over time.
+            if (((m_Rigidbody2D.rotation > 0 && m_Rigidbody2D.rotation <= 90) || (m_Rigidbody2D.rotation > -360 && m_Rigidbody2D.rotation <= -270)) && m_FacingRight == true)
+            {
+                if (m_Speed > m_MinSpeed)
+                {
+                    m_Speed = (m_Rigidbody2D.velocity.x - (0.001f * m_Rigidbody2D.rotation));
+                }
+                else
+                {
+                    m_Speed = m_MinSpeed;
+                }
+            }
+            // if player if facing left and his rotation between 0->90 or -360->-270 then he's going down hill. Thus, his velocity should slowly increase over time.
+            else if (((m_Rigidbody2D.rotation > 0 && m_Rigidbody2D.rotation <= 90) || (m_Rigidbody2D.rotation > -360 && m_Rigidbody2D.rotation <= -270)) && m_FacingRight == false)
+            {
+                if (m_Speed > m_MinSpeed)
+                {
+                    m_Speed = (m_Rigidbody2D.velocity.x + (0.001f * m_Rigidbody2D.rotation));
+                }
+                else
+                {
+                    m_Speed = m_MinSpeed;
+                }
+            }
+            // if player if facing right and his rotation between 0->-90 or -360->270 then he's going up hill. Thus, his velocity should slowly decrease over time.
+            else if (((m_Rigidbody2D.rotation < 0 && m_Rigidbody2D.rotation >= -90) || (m_Rigidbody2D.rotation < 360 && m_Rigidbody2D.rotation >= 270)) && m_FacingRight == true)
+            {
+                if (m_Speed > m_MinSpeed)
+                {
+                    m_Speed = (m_Rigidbody2D.velocity.x + (0.001f * m_Rigidbody2D.rotation));
+                }
+                else
+                {
+                    m_Speed = m_MinSpeed;
+                }
+            }
+            // if player if facing right and his rotation between 0->-90 or -360->270 then he's going up hill. Thus, his velocity should slowly increase over time.
+            else if (((m_Rigidbody2D.rotation < 0 && m_Rigidbody2D.rotation <= -90) || (m_Rigidbody2D.rotation < 360 && m_Rigidbody2D.rotation >= 270)) && m_FacingRight == false)
+            {
+                if (m_Speed > m_MinSpeed)
+                {
+                    m_Speed = (m_Rigidbody2D.velocity.x - (0.001f * m_Rigidbody2D.rotation));
+                }
+                else
+                {
+                    m_Speed = m_MinSpeed;
+                    
+                }
+            }
+        }
     }
 }
